@@ -11,7 +11,7 @@ jobs:
               uses: actions/checkout@v2
             - name: Read .nvmrc
               run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-              id: nvm
+              id: nvmProcfile
             - name: Use Node.js ${{ steps.nvm.outputs.NVMRC }}
               uses: actions/setup-node@v2
               with:
