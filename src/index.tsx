@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import '@fontsource/roboto/vietnamese-300.css';
+import '@fontsource/roboto/vietnamese-400.css';
+import '@fontsource/roboto/vietnamese-500.css';
+import '@fontsource/roboto/vietnamese-700.css';
+import { ThemeProvider } from '@mui/material';
+import theme from './theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
