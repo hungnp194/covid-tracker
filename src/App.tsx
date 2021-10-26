@@ -15,11 +15,13 @@ import {
   Typography
 } from '@mui/material';
 import './@types/index';
+import { Counter } from './features/counter/Counter';
 
 function App() {
   return (
     <>
       <CssBaseline />
+      <Counter />
       <Layout>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />

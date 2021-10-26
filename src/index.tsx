@@ -9,12 +9,16 @@ import '@fontsource/roboto/vietnamese-500.css';
 import '@fontsource/roboto/vietnamese-700.css';
 import { ThemeProvider } from '@mui/material';
 import theme from './theme';
+import { store } from './store';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
